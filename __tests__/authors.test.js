@@ -11,6 +11,10 @@ describe('authors routes', () => {
     const resp = await request(app).get('/authors');
     expect(resp.status).toBe(200);
     expect(resp.body.length).toBe(3);
+    expect(resp.body[0]).toEqual({
+      id: expect.any(String),
+      name: expect.any(String),
+    });
   });
   afterAll(() => {
     pool.end();
