@@ -18,7 +18,7 @@ describe('authors routes', () => {
     });
   });
 
-  it('GET /authors/:id should return a single author and their books', async () => {
+  it('GET /authors/1 should return a single author and their books', async () => {
     const resp = await request(app).get('/authors/1');
     expect(resp.status).toBe(200);
     expect(resp.body).toEqual({
