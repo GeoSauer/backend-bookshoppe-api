@@ -24,6 +24,8 @@ describe('authors routes', () => {
     expect(resp.body).toEqual({
       id: expect.any(String),
       name: expect.any(String),
+      dob: expect.any(String),
+      pob: expect.any(String),
       books: expect.any(Array),
     });
   });
