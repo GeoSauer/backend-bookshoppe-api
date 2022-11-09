@@ -6,7 +6,9 @@ DROP TABLE IF EXISTS author_books;
 
 CREATE TABLE authors (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    name VARCHAR NOT NULL
+    name VARCHAR NOT NULL,
+    dob DATE,
+    pob VARCHAR
 );
 
 CREATE TABLE books (
@@ -24,12 +26,14 @@ CREATE TABLE author_books (
 );
 
 INSERT INTO authors (
-    name 
+    name, 
+    dob,
+    pob
 )
 VALUES
-('Cherie Priest'),
-('K. B. Wagers'),
-('Alethea Faust')
+('Cherie Priest', '1975-07-30', 'Florida, USA'),
+('K. B. Wagers', '1982-06-22', 'Colorado, USA'),
+('Alethea Faust', '1989-05-27', 'Colorado, USA')
 ;
 
 INSERT INTO books (
